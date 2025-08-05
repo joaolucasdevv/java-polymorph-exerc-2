@@ -36,6 +36,7 @@ public class Program {
                 products.add(product);
             }
             else if (resp == 'u') {
+                System.out.println("Product #" + i + "data:");
                 System.out.print("Name: ");
                 String name = sc.nextLine();
                 System.out.print("Price: ");
@@ -47,6 +48,7 @@ public class Program {
                 products.add(product);
             }
             else if (resp == 'i') {
+                System.out.println("Product #" + i + "data:");
                 System.out.print("Name: ");
                 String name = sc.nextLine();
                 System.out.print("Price: ");
