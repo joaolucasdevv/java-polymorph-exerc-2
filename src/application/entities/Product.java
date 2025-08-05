@@ -21,4 +21,12 @@ public class Product {
         return price;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
 }
