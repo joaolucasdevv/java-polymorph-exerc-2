@@ -12,4 +12,12 @@ public class ImportedProduct extends Product {
         this.customsFee = customsFee;
     }
 
+    public Double getCustomsFee() {
+        return customsFee;
+    }
+
+    public void setCustomsFee(Double customsFee) {
+        this.customsFee = customsFee;
+    }
+
 }
