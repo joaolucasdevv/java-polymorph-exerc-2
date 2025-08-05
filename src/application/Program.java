@@ -41,6 +41,7 @@ public class Program {
                 System.out.print("Price: ");
                 double price = sc.nextDouble();
                 System.out.print("Manufacture date (DD/MM/YYYY): ");
+                sc.nextLine();
                 LocalDate date = LocalDate.parse(sc.nextLine(), UsedProduct.DTF);
 
                 Product product = new UsedProduct(name, price, date);
