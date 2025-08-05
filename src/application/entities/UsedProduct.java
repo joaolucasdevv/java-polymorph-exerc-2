@@ -14,4 +14,12 @@ public class UsedProduct extends Product{
         this.manufactureDate = manufactureDate;
     }
 
+    public LocalDate getManufactureDate() {
+        return manufactureDate;
+    }
+
+    public void setManufactureDate(LocalDate manufactureDate) {
+        this.manufactureDate = manufactureDate;
+    }
+
 }
