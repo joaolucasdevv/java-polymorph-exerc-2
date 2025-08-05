@@ -1,7 +1,9 @@
 package application;
 
 import application.entities.Product;
+import application.entities.UsedProduct;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -31,6 +33,18 @@ public class Program {
                 Product product = new Product(name, price);
                 products.add(product);
             }
+            else if (resp == 'u') {
+                System.out.print("Name: ");
+                String name = sc.nextLine();
+                System.out.print("Price: ");
+                double price = sc.nextDouble();
+                System.out.print("Manufacture date (DD/MM/YYYY): ");
+                LocalDate date = LocalDate.parse(sc.nextLine(), UsedProduct.DTF);
+
+                Product product = new UsedProduct(name, price, date);
+                products.add(product);
+            }
+
         }
 
 
