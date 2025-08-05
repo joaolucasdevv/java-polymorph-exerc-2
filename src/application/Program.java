@@ -21,12 +21,13 @@ public class Program {
         System.out.print("Enter the number of products: ");
         int n = sc.nextInt();
         for (int i=1; i<=n; i++) {
-            System.out.println("Product #" + i + "data:");
+            System.out.println("Product #" + i + " data:");
             System.out.print("Common, used or imported (c/u/i)? ");
 
             char resp = sc.next().charAt(0);
             if (resp == 'c') {
-                System.out.println("Product #" + i + "data:");
+                System.out.println("Product #" + i + " data:");
+                sc.nextLine();
                 System.out.print("Name: ");
                 String name = sc.nextLine();
                 System.out.print("Price: ");
@@ -36,7 +37,8 @@ public class Program {
                 products.add(product);
             }
             else if (resp == 'u') {
-                System.out.println("Product #" + i + "data:");
+                System.out.println("Product #" + i + " data:");
+                sc.nextLine();
                 System.out.print("Name: ");
                 String name = sc.nextLine();
                 System.out.print("Price: ");
@@ -48,7 +50,8 @@ public class Program {
                 products.add(product);
             }
             else if (resp == 'i') {
-                System.out.println("Product #" + i + "data:");
+                System.out.println("Product #" + i + " data:");
+                sc.nextLine();
                 System.out.print("Name: ");
                 String name = sc.nextLine();
                 System.out.print("Price: ");
