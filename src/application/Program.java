@@ -21,15 +21,15 @@ public class Program {
             System.out.println("Product #" + i + "data:");
             System.out.print("Common, used or imported (c/u/i)? ");
             char resp = sc.next().charAt(0);
-            switch (resp) {
-                case 'c':
-                    System.out.print("Name: ");
-                    String name = sc.nextLine();
-                    System.out.print("Price: ");
-                    double price = sc.nextDouble();
 
-                    Product product = new Product(name, price);
-                    products.add(product);
+            if (resp == 'c') {
+                System.out.print("Name: ");
+                String name = sc.nextLine();
+                System.out.print("Price: ");
+                double price = sc.nextDouble();
+
+                Product product = new Product(name, price);
+                products.add(product);
             }
         }
 
