@@ -1,5 +1,6 @@
 package application;
 
+import application.entities.ImportedProduct;
 import application.entities.Product;
 import application.entities.UsedProduct;
 
@@ -22,9 +23,10 @@ public class Program {
         for (int i=1; i<=n; i++) {
             System.out.println("Product #" + i + "data:");
             System.out.print("Common, used or imported (c/u/i)? ");
-            char resp = sc.next().charAt(0);
 
+            char resp = sc.next().charAt(0);
             if (resp == 'c') {
+                System.out.println("Product #" + i + "data:");
                 System.out.print("Name: ");
                 String name = sc.nextLine();
                 System.out.print("Price: ");
@@ -42,6 +44,17 @@ public class Program {
                 LocalDate date = LocalDate.parse(sc.nextLine(), UsedProduct.DTF);
 
                 Product product = new UsedProduct(name, price, date);
+                products.add(product);
+            }
+            else if (resp == 'i') {
+                System.out.print("Name: ");
+                String name = sc.nextLine();
+                System.out.print("Price: ");
+                double price = sc.nextDouble();
+                System.out.print("Custom fee: ");
+                double customFee = sc.nextDouble();
+
+                Product product = new ImportedProduct(name, price, customFee);
                 products.add(product);
             }
 
